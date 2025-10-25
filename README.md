@@ -223,3 +223,156 @@ Verify Traceability: Ensure each requirement can be traced back to a business ne
 Obtain Formal Approval: Secure sign-off from key stakeholders confirming that requirements accurately represent their needs
 Check for Completeness: Verify that all necessary requirements have been captured and no critical functionality is missing
 Validate Compliance: Ensure requirements meet relevant standards, regulations, and organizational policies
+
+## Types of Requirements
+
+Requirements in software development are typically categorized into two main types: Functional Requirements and Non-functional Requirements. Understanding the distinction between these categories is essential for creating comprehensive system specifications that address both what the system should do and how well it should perform.
+
+1. Functional Requirements
+Functional Requirements define the specific behaviors, features, functions, and capabilities that a system must provide. They describe what the system should do in terms of tasks, services, and functions that users can perform. These requirements focus on the system's functionality and the interactions between the system and its users or other systems. Functional requirements are typically expressed as "The system shall..." statements and should be testable and measurable.
+Characteristics:
+
+Describe specific system behaviors and functions
+Define user interactions and system responses
+Specify business rules and logic
+Detail input/output requirements
+Are directly observable and testable
+Focus on "what" the system does
+
+Examples for Booking Management System:
+
+User Registration and Authentication
+
+The system shall allow new users to create an account using email address, password, and basic profile information
+The system shall authenticate users through email and password credentials before granting access to booking features
+The system shall provide a "Forgot Password" feature that sends password reset links to registered email addresses
+The system shall support social media login options (Google, Facebook) as alternative authentication methods
+
+
+Search and Browse Functionality
+
+The system shall allow users to search for available rooms by check-in date, check-out date, location, and number of guests
+The system shall display search results with room photos, descriptions, amenities, pricing, and availability status
+The system shall provide filtering options for price range, room type, star rating, and guest reviews
+The system shall allow users to sort search results by price (low to high, high to low), popularity, and guest ratings
+
+
+Booking Management
+
+The system shall enable users to select a room and proceed to booking by entering guest details and payment information
+The system shall validate room availability in real-time before confirming a booking
+The system shall generate a unique booking confirmation number for each successful reservation
+The system shall send booking confirmation emails to users containing reservation details, check-in instructions, and cancellation policy
+The system shall allow users to view their booking history and upcoming reservations in their account dashboard
+The system shall enable users to modify booking dates (subject to availability) up to 48 hours before check-in
+The system shall allow users to cancel bookings according to the cancellation policy and process refunds automatically
+
+
+Payment Processing
+
+The system shall accept multiple payment methods including credit cards, debit cards, and digital wallets (PayPal, Apple Pay)
+The system shall securely process payment transactions through an integrated payment gateway
+The system shall validate payment information and display appropriate error messages for declined transactions
+The system shall generate and store payment receipts for all successful transactions
+The system shall support partial payments and deposit options for advance bookings
+
+
+Admin Management Functions
+
+The system shall provide an admin dashboard for hotel staff to manage room inventory, pricing, and availability
+The system shall allow administrators to add, edit, or remove room listings with photos, descriptions, and amenities
+The system shall enable staff to view all bookings with filtering options by date, status, and guest information
+The system shall provide reporting features showing booking statistics, revenue analytics, and occupancy rates
+The system shall allow administrators to manually create or modify bookings on behalf of guests
+
+
+Notifications and Communication
+
+The system shall send automated email notifications for booking confirmations, modifications, and cancellations
+The system shall send reminder emails to guests 24 hours before their check-in date
+The system shall provide in-app notifications for booking status updates and special offers
+The system shall enable direct messaging between guests and hotel staff for inquiries and special requests
+
+2. Non-functional Requirements
+Non-functional Requirements (NFRs) specify the quality attributes, system properties, and constraints that define how the system should perform its functions. Rather than describing what the system does, NFRs describe how well the system should do it. These requirements address aspects such as performance, security, usability, reliability, scalability, and maintainability. Non-functional requirements are critical for ensuring the system meets user expectations for quality and provides a satisfactory user experience.
+Characteristics:
+
+Define quality attributes and system properties
+Specify performance and operational criteria
+Establish constraints and standards
+Address system-wide concerns
+May be harder to test than functional requirements
+Focus on "how well" the system performs
+
+Examples for Booking Management System:
+
+Performance Requirements
+
+The system shall load search results within 2 seconds under normal network conditions
+The system shall process booking transactions and generate confirmation within 3 seconds
+The system shall support at least 10,000 concurrent users without performance degradation
+The system shall handle up to 500 booking requests per minute during peak hours
+The system shall display room availability updates in real-time with a maximum latency of 1 second
+
+
+Security Requirements
+
+The system shall encrypt all sensitive data (passwords, payment information) using industry-standard encryption (AES-256)
+The system shall comply with PCI DSS (Payment Card Industry Data Security Standard) for handling payment card information
+The system shall implement secure HTTPS protocol for all data transmission
+The system shall enforce strong password policies requiring minimum 8 characters with uppercase, lowercase, numbers, and special characters
+The system shall implement multi-factor authentication for administrative accounts
+The system shall automatically log out inactive users after 15 minutes of inactivity
+The system shall maintain audit logs of all booking transactions and user activities for at least 12 months
+
+
+Usability Requirements
+
+The system shall provide an intuitive user interface that requires no training for basic booking operations
+The system shall be accessible on desktop, tablet, and mobile devices with responsive design
+The system shall comply with WCAG 2.1 Level AA accessibility standards for users with disabilities
+The system shall support multiple languages including English, Spanish, French, and German
+The system shall display clear error messages that guide users to correct input mistakes
+The booking process shall be completable in no more than 5 steps from search to confirmation
+
+
+Reliability and Availability
+
+The system shall maintain 99.9% uptime, allowing for no more than 8.76 hours of downtime per year
+The system shall perform automated daily backups of all booking and user data
+The system shall implement failover mechanisms to ensure continuity in case of server failure
+The system shall recover from system crashes without data loss, restoring service within 5 minutes
+The system shall maintain data integrity during concurrent booking attempts for the same room
+
+
+Scalability Requirements
+
+The system architecture shall support horizontal scaling to accommodate business growth
+The system shall be able to scale to support 100,000 registered users within 2 years
+The system shall handle a 300% increase in traffic during holiday seasons without service disruption
+The database shall be designed to efficiently handle up to 1 million booking records
+
+
+Maintainability Requirements
+
+The system code shall follow industry-standard coding conventions and best practices
+The system shall be modular with clear separation of concerns to facilitate updates and maintenance
+The system shall include comprehensive documentation for all APIs and system components
+The system shall support version updates with zero downtime using blue-green deployment strategies
+The system shall provide detailed logging and monitoring capabilities for troubleshooting
+
+
+Compatibility Requirements
+
+The system shall be compatible with the latest versions of major web browsers (Chrome, Firefox, Safari, Edge)
+The system shall integrate seamlessly with existing hotel property management systems via RESTful APIs
+The system shall support integration with third-party services (payment gateways, email services, SMS providers)
+The system shall function properly on iOS 14+ and Android 10+ mobile devices
+
+
+Compliance and Legal Requirements
+
+The system shall comply with GDPR (General Data Protection Regulation) for handling EU user data
+The system shall comply with local data protection and privacy laws in all operating regions
+The system shall provide users with the ability to export their personal data and delete their accounts
+The system shall maintain compliance with booking industry standards and regulations
